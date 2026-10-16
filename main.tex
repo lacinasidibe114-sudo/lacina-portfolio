@@ -1,0 +1,201 @@
+\documentclass[11pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\geometry{left=1.6cm,right=1.6cm,top=1.4cm,bottom=1.4cm}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+% ---------- Couleurs / style ----------
+\definecolor{mainblue}{RGB}{20,70,140}
+\titleformat{\section}
+  {\large\bfseries\color{mainblue}}
+  {}{0em}{}
+  [\vspace{-0.4em}\rule{\textwidth}{0.4pt}]
+\setcounter{secnumdepth}{0}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=mainblue,
+    urlcolor=mainblue,
+    pdftitle={CV Lacina Sidibe - Robotique autonome multimodale},
+    pdfauthor={Lacina Sidibe}
+}
+
+% ---------- Commandes pratiques ----------
+\newcommand{\cventry}[3]{%
+    \textbf{#1} \hfill #2\\
+    #3
+}
+
+\begin{document}
+
+% ================= HEADER =================
+\begin{center}
+    {\Huge \textbf{LACINA SIDIBE}}\\[0.25em]
+    {\large \textbf{Étudiant ingénieur en dernière année Robotique \& IA — Autonomie mobile multimodale}}\\[0.2em]
+    {\small Cible : PFE 2027 en perception/localisation robustes, navigation autonome et robotique multimodale}\\[0.6em]
+    lacinasidibe114@gmail.com \quad | \quad +212 779440175 \quad | \quad Fès, Maroc\\
+    GitHub : [lien GitHub] \quad | \quad LinkedIn : [lien LinkedIn]
+\end{center}
+
+\vspace{0.4em}
+
+% ================= PROFIL =================
+\section{Profil}
+Étudiant en \textbf{3\textsuperscript{e} et dernière année du cycle ingénieur} en Robotique \& Intelligence Artificielle à l'Université Euro-Méditerranéenne de Fès, je construis une expertise en \textbf{autonomie mobile multimodale} : perception multi-capteurs, localisation robuste, navigation ROS 2/Nav2, interaction langage-vision et validation simulation $\rightarrow$ robot réel. Je recherche un \textbf{PFE 2027} en laboratoire ou R\&D où je peux produire des résultats mesurables, analyser les échecs et déployer une architecture autonome sûre sur plateforme réelle.
+
+% ================= COMPÉTENCES =================
+\section{Compétences techniques}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Robotique autonome :} ROS 2, Nav2, MoveIt2, SLAM Toolbox, AMCL, RTAB-Map, robot\_localization, SLAM, localisation, cartographie 2D/3D, planification globale/locale, évitement dynamique, récupération, TF2, rosbag, RViz.
+    \item \textbf{Simulation \& transfert sim-to-real :} Gazebo, Isaac Sim, Webots, domain randomization, calibration, synchronisation capteurs, comparaison simulation/réel.
+    \item \textbf{Perception \& fusion :} LiDAR 2D/3D, caméra RGB-D, IMU, encodeurs, OpenCV, YOLO, YOLOv8-pose, Depth Anything V2, fusion LiDAR/IMU/caméra, détection d'obstacles franchissables/non franchissables, robustesse aux changements de scène.
+    \item \textbf{IA multimodale \& optimisation :} LLM/VLM, STT/TTS, ancrage langage-vision, planification de tâches, \textbf{logique floue Mamdani}, \textbf{PSO}, fonction de coût, validation croisée, garde-fous, catalogue d'actions ROS 2 typées.
+    \item \textbf{Programmation \& systèmes :} Python, C, C++, VHDL, Java, MATLAB/Simulink, Linux, Docker, Git, Raspberry Pi, FPGA, UART.
+    \item \textbf{Outils :} Proteus, Quartus, ModelSim, Blender, Unity, 3DEXPERIENCE, MikroC, Emu8086.
+\end{itemize}
+
+% ================= PROJET PHARE =================
+\section{Projet phare — Robot mobile multimodal autonome}
+\textit{Projet personnel en cours, aligné PFE 2027} \hfill [2025--2026]\\
+\textbf{Objectif :} comprendre une instruction humaine, percevoir l'environnement, naviguer et exécuter une tâche de manière sûre en simulation puis sur robot réel.
+\begin{itemize}[leftmargin=*, nosep]
+    \item Architecture \textbf{ROS 2/Nav2} : perception, localisation, planification globale/locale, évitement dynamique, récupération après échec et retour en état sûr.
+    \item Simulation \textbf{Isaac Sim/Gazebo} : robot différentiel/omnidirectionnel, LiDAR et caméra RGB-D simulés, obstacles statiques/dynamiques, scénarios de dégradation capteur.
+    \item Pipeline multimodal : \textbf{STT/TTS + LLM/VLM + YOLO}, ancrage des références langage-vision, catalogue d'actions ROS 2 typées, politique de refus et de clarification.
+    \item Validation expérimentale : protocole, baselines, ablations, métriques de réussite, latence STT $\rightarrow$ décision $\rightarrow$ action, collisions, interventions humaines, robustesse au bruit.
+    \item Résultats préliminaires : taux de réussite [X\,\%], latence bout en bout [Y\,ms], taux de clarification [Z\,\%], taux de refus corrects [W\,\%].
+\end{itemize}
+
+% ================= EXPÉRIENCES =================
+\section{Expériences}
+
+\cventry{Stage de recherche — Laboratoire de Mathématiques (Université Euro-Méditerranéenne de Fès)}{Juin -- Août 2026}{%
+\textit{Optimisation PSO d'un contrôleur flou de poursuite de personne — suite de mon projet personnel.}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Objectif :} améliorer automatiquement le contrôleur flou de mon projet personnel en optimisant les fonctions d'appartenance avec un \textbf{PSO} (Particle Swarm Optimization), sans modifier la base de règles experte.
+    \item \textbf{Méthodologie :} encodage compact de \textbf{15 paramètres} (nœuds des partitions floues), simulation réaliste intégrant \textbf{FOV $\pm33^\circ$}, \textbf{latence 0,3~s}, bruit de mesure et dynamique d'actionneurs, 6 scénarios de poursuite, \emph{Common Random Numbers} et seeds fixes pour une reproductibilité totale.
+    \item \textbf{Comparaison de deux modélisations} des fonctions d'appartenance : \textbf{trapézoïdale} vs \textbf{mixte trapèzes/triangles}. L'approche mixte (partition de Ruspini) gagne sur les 6 scénarios avec un écart stable de \textbf{9 à 12\,\%}.
+    \item \textbf{Différence mesurée avant / après PSO (approche mixte) :}
+      \begin{itemize}[nosep]
+        \item coût de poursuite : \textbf{17,92 $\to$ 1,49} ($\mathbf{-91{,}7\,\%}$ en entraînement ; $\mathbf{-95{,}4\,\%}$ en validation) ;
+        \item perte de cible : \textbf{26--90\,\% $\to$ 0\,\%} sur les scénarios critiques (traversées) ;
+        \item collisions : \textbf{éliminées} sur les 6 scénarios ;
+        \item aucun surapprentissage : gain de validation \textbf{supérieur} au gain d'entraînement (ratio 1,04).
+      \end{itemize}
+    \item \textbf{Livrables :} simulateur Python réaliste, moteur Mamdani vectorisé, fichier de paramètres optimisés, chargeur d'intégration temps réel et rapport technique complet (protocole, baselines, ablations, analyse d'échecs).
+\end{itemize}
+}
+
+\cventry{Stage robotique mobile — CleanFXe, Fès, Maroc}{Juil. 2025 -- Août 2025}{%
+\begin{itemize}[leftmargin=*, nosep]
+    \item Participation à des projets de \textbf{robotique mobile} et de \textbf{machines de nettoyage autonomes}.
+    \item Application de compétences en \textbf{systèmes embarqués}, automatisme et conception de systèmes automatisés.
+    \item Collaboration en équipe startup : initiative, professionnalisme, adaptabilité, tests et intégration.
+    \item Résultat : [décrire un résultat mesurable : réduction du temps de test, amélioration de fiabilité, etc.].
+\end{itemize}
+}
+
+% ================= PROJETS =================
+\section{Projets robotique \& académiques}
+
+\cventry{Projet personnel — Poursuite de personne par robot mobile (ROS 2 + logique floue, sans PSO)}{[2024--2025]}{%
+\textit{Version initiale du système, réalisée en simulation et sur robot réel.}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Chaîne complète :} perception monoculaire (\textbf{Depth Anything V2} pour la profondeur métrique $+$ \textbf{YOLOv8-pose} pour la détection et les points-clés) $\to$ \textbf{contrôleur flou Mamdani} (2 entrées : distance, angle ; 2 sorties : vitesse, rotation ; 25 règles) $\to$ \textbf{robot mobile unicycle}.
+    \item \textbf{Architecture ROS 2} : nœuds de perception, de commande floue et d'action, interfaces typées, couche de sécurité (\code{RobotTracker} : saturation, lissage, arrêt d'urgence sous 0,8~m).
+    \item \textbf{Validation en simulation} : modèles sous \textbf{Isaac Sim} et \textbf{Gazebo}, scénarios de poursuite (aller-retour, traversée latérale, virage en L, zigzag).
+    \item \textbf{Déploiement sur robot réel} : caméra monoculaire calibrée, exécution temps réel ($\approx 15$~FPS), contrat d'interface distance/angle conservé de bout en bout.
+    \item \textbf{Limites identifiées :} réglage manuel des fonctions d'appartenance, perte de cible jusqu'à 90\,\% sur les traversées franches, collisions possibles au retour de la personne — ce qui a motivé l'optimisation PSO réalisée en stage de recherche.
+\end{itemize}
+}
+
+\cventry{Bras robotique 6 DOF — ROS 2, MoveIt2, Python/C++}{[2025--2026]}{%
+\begin{itemize}[leftmargin=*, nosep]
+    \item Modélisation URDF/Xacro d'un bras 6 DOF et configuration \textbf{MoveIt2} : planification de trajectoires, cinématique directe/inverse, contraintes articulaires.
+    \item Intégration ROS 2 : nœuds de contrôle, interfaces d'action, visualisation RViz, simulation Gazebo/Isaac Sim.
+    \item Planification et exécution de tâches de manipulation (pick/place) sur servomoteurs via Raspberry Pi/microcontrôleur.
+    \item Validation : taux de réussite de prise/dépose [X\,\%], erreur moyenne de position [Y\,mm], temps de cycle [Z\,s].
+\end{itemize}
+}
+
+\cventry{Robot mobile autonome — SLAM Toolbox 2D, EKF, AMCL, Nav2}{[2025--2026]}{%
+\begin{itemize}[leftmargin=*, nosep]
+    \item Cartographie 2D avec \textbf{SLAM Toolbox} sous ROS 2 : construction de carte, boucle fermée, sauvegarde et chargement de carte.
+    \item Fusion odométrie + IMU via \textbf{robot\_localization} (EKF) pour estimer l'état du robot de manière robuste.
+    \item Localisation sur carte avec \textbf{AMCL} et navigation autonome avec \textbf{Nav2} : planification globale/locale, contrôleurs, évitement d'obstacles.
+    \item Tests en simulation Gazebo/Webots et sur robot réel : taux de réussite de navigation [X\,\%], erreur de localisation [Y\,m], collisions [Z].
+\end{itemize}
+}
+
+\cventry{Cartographie 3D — RTAB-Map avec LiDAR 3D}{[2025--2026]}{%
+\begin{itemize}[leftmargin=*, nosep]
+    \item Acquisition et synchronisation de nuages de points \textbf{LiDAR 3D}, odométrie et éventuellement caméra RGB-D.
+    \item Cartographie et localisation 3D avec \textbf{RTAB-Map} : boucle fermée, carte globale, nuage de points dense.
+    \item Comparaison avec SLAM Toolbox 2D : précision, robustesse, coût CPU/GPU, qualité de carte.
+    \item Résultats : erreur de trajectoire [X\,m], fréquence de mise à jour [Y\,Hz], mémoire [Z\,Mo].
+\end{itemize}
+}
+
+\cventry{Fusion de capteurs LiDAR / IMU / RGB pour navigation autonome — ROS 2, Python}{[2024--2025]}{%
+\begin{itemize}[leftmargin=*, nosep]
+    \item Étude et pré-implémentation d'un module de perception pour robot mobile.
+    \item Fusion LiDAR, caméra RGB et IMU pour localisation et cartographie.
+    \item Objectif : améliorer la robustesse en environnement dynamique et en cas de capteur dégradé.
+    \item Résultat : [X\,\%] d'amélioration de la stabilité de localisation / [Y\,m] d'erreur moyenne.
+\end{itemize}
+}
+
+\cventry{Détection automatique de panneaux routiers — CNN, OpenCV, Raspberry Pi}{[2024]}{%
+\begin{itemize}[leftmargin=*, nosep]
+    \item Développement d'un système embarqué de reconnaissance de panneaux en temps réel sur voiture autonome miniature.
+    \item Pipeline : acquisition, prétraitement, inférence CNN, décision embarquée.
+    \item Précision : [X\,\%] ; latence : [Y\,ms].
+\end{itemize}
+}
+
+\cventry{Classification de signaux EMG — Machine Learning, SVM, Bitalino}{[2023]}{%
+\begin{itemize}[leftmargin=*, nosep]
+    \item Extraction de caractéristiques (RMS, MAV) et classification de mouvements de la main.
+    \item Précision de classification : [X\,\%].
+\end{itemize}
+}
+
+% ================= FORMATION =================
+\section{Formation}
+\cventry{3\textsuperscript{e} année (dernière année) cycle ingénieur — Robotique \& Intelligence Artificielle}{2026--2027}{Université Euro-Méditerranéenne de Fès, Maroc}
+
+\cventry{2\textsuperscript{e} année cycle ingénieur — Robotique \& Intelligence Artificielle}{2025--2026}{Université Euro-Méditerranéenne de Fès, Maroc}
+
+\cventry{1\textsuperscript{ère} année cycle ingénieur — Robotique \& Intelligence Artificielle}{2022--2024}{Université Euro-Méditerranéenne de Fès, Maroc}
+
+\cventry{Classe préparatoire intégrée aux grandes écoles d'ingénieur}{2022--2024}{École Supérieure de l'Information, Télécommunication, Management et Génie Civil, Maroc}
+
+\cventry{Baccalauréat Technique Électronique (F2)}{2016--2022}{Lycée technique Abidjan, Côte d'Ivoire}
+
+% ================= CERTIFICATIONS =================
+\section{Certifications}
+\begin{itemize}[leftmargin=*, nosep]
+    \item \textbf{Self Driving and ROS 2 -- Learn by Doing! Odometry \& Control} — Antonio Brandi, Udemy, 2026 (29~h)
+    \item \textbf{Self Driving and ROS 2 -- Learn by Doing! Map \& Localization} — Antonio Brandi, Udemy, 2026 (25~h)
+    \item \textbf{Self Driving and ROS 2 -- Learn by Doing! Plan \& Navigation} — Antonio Brandi, Udemy, 2026 (28,5~h)
+\end{itemize}
+
+% ================= LANGUES =================
+\section{Langues}
+\textbf{Français :} langue maternelle \quad | \quad \textbf{Anglais :} intermédiaire technique
+
+% ================= POSITIONNEMENT =================
+\section{Positionnement \& cibles PFE 2027}
+\textbf{Positionnement :} Ingénieur robotique autonome multimodale — intégration ROS 2 de perception, localisation, navigation et interaction langage-vision, avec validation en simulation et sur robot réel.\\[0.3em]
+\textbf{Cibles :} laboratoires et équipes R\&D en autonomie mobile, perception/localisation robustes, robotique multimodale, embodied AI, human-robot interaction, vision-language models. Ex. : CRIStAL, ONERA/DTIS, Promise Robotics, ROZOR Robotics, laboratoires canadiens (ASRL, Carleton RNCSL, Polytechnique Montréal, McGill, U Toronto, Waterloo).\\[0.3em]
+\textbf{Mots-clés :} ROS 2, Nav2, SLAM Toolbox, AMCL, RTAB-Map, robot\_localization, perception multi-capteurs, sim-to-real, Isaac Sim, Gazebo, LLM/VLM, STT/TTS, YOLO, YOLOv8-pose, Depth Anything V2, logique floue, PSO, validation expérimentale, robot mobile autonome.
+
+\end{document}
