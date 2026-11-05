@@ -8,22 +8,13 @@ Portfolio statique, responsive et optimisé pour GitHub Pages. Il utilise Tailwi
 2. Dans **Settings → Pages**, sélectionner **GitHub Actions** comme source.
 3. Le workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) publie automatiquement le contenu à chaque push sur `main`.
 
-## Personnaliser les liens et les vidéos
+## Personnaliser le portfolio
 
-- Remplacer les liens `https://github.com/` et `https://www.linkedin.com/` dans `index.html` par les profils réels.
+- Le portfolio est volontairement utilisable sans photo, capture d'écran ni vidéo. La section projet phare utilise une visualisation CSS de l'architecture ROS 2 ; les médias pourront être ajoutés plus tard sans refaire la mise en page.
 - Ajouter le CV sous `assets/cv-lacina-sidibe.pdf`. Le bouton de téléchargement est déjà câblé.
 - Ajouter le rapport sous `assets/rapport-pso.pdf` ou modifier son lien dans `index.html`.
-- Pour une vidéo YouTube, remplacer le placeholder de la section projet phare par une iframe YouTube. Exemple :
-
-```html
-<iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID"
-  title="Démonstration robot mobile" loading="lazy"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture"
-  allowfullscreen></iframe>
-```
-
-- Les cartes et leurs liens sont dans le tableau `projects` de [`script.js`](script.js). Remplacer les dépôts, métriques et IDs vidéo sans toucher au rendu.
-- Pour un GIF ou une vidéo locale, utiliser `assets/demo.gif` ou `assets/demo.mp4`, puis remplacer le contenu de `.video-placeholder` par `<video controls muted playsinline poster="..."><source src="assets/demo.mp4" type="video/mp4"></video>`.
+- Les cartes de projets et leurs technologies sont dans le tableau `projects` de [`script.js`](script.js).
+- Le lien GitHub principal est déjà configuré vers `lacinasidibe114-sudo/lacina-portfolio`. Ajouter les dépôts individuels lorsque leurs URLs seront prêtes.
 
 ## Ajouter un projet détaillé
 
@@ -31,4 +22,4 @@ Dupliquer [`projects/project-template.html`](projects/project-template.html), re
 
 ## Données utilisées
 
-Les résultats PSO, les technologies et le parcours affichés proviennent du CV `main.tex` présent dans ce dépôt. Les champs entre crochets (`[X]`, `[Y]`) sont volontairement laissés à compléter avec les mesures finales du projet phare.
+Les résultats PSO, les technologies et le parcours affichés proviennent du CV `main.tex` présent dans ce dépôt. Les mesures encore en cours de benchmark ne sont pas présentées comme des résultats afin de préserver la crédibilité du portfolio.
